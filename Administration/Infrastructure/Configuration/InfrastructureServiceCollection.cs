@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SoftServe.ITAcademy.BackendDubbingProject.Administration.Core.Interfaces;
 using SoftServe.ITAcademy.BackendDubbingProject.Administration.Infrastructure.Database;
@@ -13,7 +14,7 @@ namespace SoftServe.ITAcademy.BackendDubbingProject.Administration.Infrastructur
             const string connection = "Data Source=dubbing.db";
 
             services.AddDbContext<DubbingContext>(options =>
-                options.UseSqlite(connection, b => b.MigrationsAssembly("Web")));
+                options.UseSqlServer(connection, b => b.MigrationsAssembly("Web")));
 
             services.AddScoped<DbContext, DubbingContext>();
 
