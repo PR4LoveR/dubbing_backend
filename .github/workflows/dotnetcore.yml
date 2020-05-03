@@ -19,6 +19,8 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Database update
+      run: dotnet ef database update
     - name: Deploy release to server
       run: dotnet publish -c Release -o ${{ github.workspace }}/published_app
     - name: Deploy to Server
