@@ -1,11 +1,4 @@
-# User-specific files
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-bin
-obj
-Migrations
+
 
 #SQLite database file
 *.db
@@ -13,18 +6,6 @@ Migrations
 #Mp3 files
 *.mp3
 
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-bld/
-[Bb]in/
-[Oo]bj/
-app/
-[Ll]og/
 
 # Visual Studio 2015 cache/options directory
 backend-dubbing-project/[Bb]in/
@@ -290,8 +271,7 @@ __pycache__/
 # User-specific files (MonoDevelop/Xamarin Studio)
 
 # Build results
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
+
 
 # Visual Studio 2015/2017 cache/options directory
 # Uncomment if you have tasks that create the project's static files in wwwroot
