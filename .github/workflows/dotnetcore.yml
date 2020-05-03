@@ -11,18 +11,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 2.2.402
     - name: Install dependencies
       run: dotnet restore
+    
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Database update
-      run: dotnet ef database update
+    
     - name: Deploy release to server
       run: dotnet publish -c Release -o ${{ github.workspace }}/published_app
+    
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.1
       env:
