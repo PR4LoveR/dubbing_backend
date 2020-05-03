@@ -41,6 +41,6 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
         ARGS: "-rltgoDzvO --delete"
         SOURCE: "/home/runner/work/dubbing_backend/dubbing_backend/Web/bin/Release/netcoreapp2.2/publish/"
-        REMOTE_HOST: 18.157.60.58
+        REMOTE_HOST: "18.157.60.58"
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: /home/${{ secrets.REMOTE_USER }}/builded_dubbing_app/
+        TARGET: "/home/${{ secrets.REMOTE_USER }}/builded_dubbing_app/"
