@@ -33,14 +33,14 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
    
     - name: Publish Release Version
-      run: dotnet publish -c Release -o /dubbing_backend/published_app/
+      run: dotnet publish -c Release -o ${{ github.workspace }}/published_app/
     
     - name: Deploy to Dubbing Backend server
       uses: easingthemes/ssh-deploy@v2.0.7
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
         ARGS: "-rltgoDzvO --delete"
-        SOURCE: "/dubbing_backend/published_app/"
+        SOURCE: ${{ github.workspace }}/published_app/
         REMOTE_HOST: "18.157.60.58"
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: "/home/${{ secrets.REMOTE_USER }}/builded_dubbing_app/"
