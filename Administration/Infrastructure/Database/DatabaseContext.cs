@@ -20,7 +20,7 @@ namespace SoftServe.ITAcademy.BackendDubbingProject.Administration.Infrastructur
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localhost)\\MSSQLSERVER;Database = dubbingDB;Integrated Security=true;");
+            optionsBuilder.UseSqlServer("Server=newdatabase.c3dau9pnded7.eu-central-1.rds.amazonaws.com\\MSSQLSERVER, 1433;Database=myDataBase;User Id=root;Password=needforspeed;");
         }
     }
 }
