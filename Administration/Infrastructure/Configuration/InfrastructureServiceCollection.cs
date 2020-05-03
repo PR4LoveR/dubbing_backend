@@ -11,7 +11,7 @@ namespace SoftServe.ITAcademy.BackendDubbingProject.Administration.Infrastructur
     {
         public void RegisterDependencies(IServiceCollection services)
         {
-            const string connection = "Server=(localhost)\\MSSQLSERVER;Database = dubbingDB;Integrated Security=true;";
+            const string connection = "Server=(localhost)\\MSSQLSERVER, 1433;Database = dubbingDB;Integrated Security=true;";
 
             services.AddDbContext<DubbingContext>(options =>
                 options.UseSqlServer(connection, b => b.MigrationsAssembly("Web")));
