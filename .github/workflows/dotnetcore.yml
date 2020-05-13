@@ -34,6 +34,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
           ARGS: "-rltgoDzvO --delete"
           SOURCE: "published_app/"
-          REMOTE_HOST: 35.156.224.101
+          REMOTE_HOST: 52.57.56.6
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: /home/${{ secrets.REMOTE_USER }}/builded_dubbing_app
