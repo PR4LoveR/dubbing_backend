@@ -25,7 +25,7 @@ namespace SoftServe.ITAcademy.BackendDubbingProject.Web
             IAdministrationServiceCollection administrationServiceCollection,
             IInfrastructureServiceCollection infrastructureServiceCollection)
         {
-            Configuration = configuration;
+            
             _administrationServiceCollection = administrationServiceCollection;
             _infrastructureServiceCollection = infrastructureServiceCollection;
         }
