@@ -11,7 +11,7 @@ namespace SoftServe.ITAcademy.BackendDubbingProject.Administration.Infrastructur
     {
         public void RegisterDependencies(IServiceCollection services)
         {
-            const string connection = "Server=newdatabase.c3dau9pnded7.eu-central-1.rds.amazonaws.com\\MSSQLSERVER, 1433;Database=myDataBase;User Id=root;Password=needforspeed;";
+            const string connection = "Server=awsrds.c3dau9pnded7.eu-central-1.rds.amazonaws.com\\MSSQLSERVER, 1433;Database=myDataBase;User Id=devmaster;Password=needforspeed;";
 
             services.AddDbContext<DubbingContext>(options =>
                 options.UseSqlServer(connection, b => b.MigrationsAssembly("Web")));
