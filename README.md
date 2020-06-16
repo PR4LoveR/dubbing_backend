@@ -4,9 +4,9 @@
 - .NET Core 2.2
 - ASP.NET Core (with SignalR Core)
 - ORM: Entity Framework Core
-- DB: SQLite
+- DB: MS SQL Server
 - Unit tests: xUnit
-- GitLab CI
+- GitHub Actions
 
 ## How to setup:  
 ```
