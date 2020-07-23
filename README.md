@@ -1,5 +1,5 @@
 # Lviv Regional Puppet Theater
-## Demo test
+
 ## Backend technology stack:
 - .NET Core 2.2
 - ASP.NET Core (with SignalR Core)
